@@ -43,7 +43,7 @@ Run the populate tool to add some records to the DB (this currently just uses my
 
     php bin/populate.php --help
     
-![Populate DB](raw/master/populate.png "Populate DB")    
+![Populate DB](populate.png "Populate DB")    
 
     php bin/populate.php -n5
 
@@ -52,7 +52,7 @@ Run the process tool to send the records to the Madrill App
 
     php bin/process.php --help
     
-![Process Emails](raw/master/process.png "Process Emails")    
+![Process Emails](process.png "Process Emails")    
     
     // Process them all
     php bin/process.php
@@ -60,7 +60,7 @@ Run the process tool to send the records to the Madrill App
     // Process just 5
     php bin/process.php -n5
     
-![Processed Emails](raw/master/run_process.png "Processed Emails")    
+![Processed Emails](run_process.png "Processed Emails")    
 
 
 That's it.
