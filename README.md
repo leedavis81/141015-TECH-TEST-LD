@@ -7,6 +7,10 @@ if you are not familiar with it.
 Instructions
 ------------
 
+Clone this repository
+
+    git clone https://github.com/checkoutsmart-test/141015-TECH-TEST-LD.git
+
 run composer install
 
     php composer.phar install
@@ -33,10 +37,14 @@ Set up a database with the following schematic:
 
 Ensure the DB credentials are in the conf/db.ini file
 
+Check conf/mandrill.ini to ensure it has the API credentials
+
 Run the populate tool to add some records to the DB (this currently just uses my email address)
 
     php bin/populate.php --help
     
+![Populate DB](raw/master/populate.png "Populate DB")    
+
     php bin/populate.php -n5
 
 
@@ -44,11 +52,15 @@ Run the process tool to send the records to the Madrill App
 
     php bin/process.php --help
     
+![Process Emails](raw/master/process.png "Process Emails")    
+    
     // Process them all
     php bin/process.php
     
     // Process just 5
     php bin/process.php -n5
+    
+![Processed Emails](raw/master/run_process.png "Processed Emails")    
 
 
 That's it.
