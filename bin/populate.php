@@ -7,12 +7,11 @@
 // Set the default timezone
 date_default_timezone_set('Europe/London');
 
-require '../vendor/autoload.php';
-require 'helper.php';
-
+require realpath(__DIR__ . '/../vendor/autoload.php');
+require realpath(__DIR__ . '/helper.php');
 
 $service = new \Smart\Service\Email(
-    new \Smart\Service\Adapter\PdoAdapter(parse_ini_file('../conf/db.ini'))
+    new \Smart\Service\Adapter\PdoAdapter(parse_ini_file(realpath(__DIR__ . '/../conf/db.ini')))
 );
 
 $options = parsePopulateCliArguments();
